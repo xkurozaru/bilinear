@@ -43,7 +43,7 @@ public:
 		vector<vector<unsigned char>> b(y_size, vector<unsigned char>(x_size));
 
 		ifstream file_in;
-		file_in.open(filename, std::ios::out | std::ios::binary);
+		file_in.open(filename, std::ios::in | std::ios::binary);
 		if (!file_in.is_open())
 		{
 			cout << "file is not opened.";
@@ -183,7 +183,7 @@ void bilinear(Image* InImg, Image* BilinearImg, double rate)
 	}
 }
 
-void menu1(Image *InImg);
+void menu1(Image* InImg);
 void menu2(Image* InImg, Image* RotatedImg);
 void menu3(Image* InImg, Image* NearestImg);
 void menu4(Image* InImg, Image* BilinearImg);
